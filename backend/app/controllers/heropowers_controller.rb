@@ -1,15 +1,21 @@
 class HeropowersController < ApplicationController
+
+  # POST /heropowers or /heropowers.json
   def create
-    hero_power = HeroPower.new(hero_power_params)
-    if hero_power.save
-      hero = hero_power.hero
-      render json: hero.as_json(include: :powers)
+    hero_power = HeroPower.create(hero_power_params)
+    if hero_power.valid?
+      render json: hero_power.hero.as_json(include: :powers)
     else
-      render json: { errors: hero_power.errors.full_messages }, status: :unprocessable_entity
-    end
+      render json: { errors: hero_power.errors.full_messages }, status: 422
+    end 
   end
+  
+
   private
-  def hero_power_params
-    params.require(:hero_power).permit(:strength, :power_id, :hero_id)
-  end
+    
+
+    # Only allow a list of trusted parameters through.
+    def heropower_params
+      params.require(:heropower).permit(:strength, :hero_id, :power_id)
+    end
 end
