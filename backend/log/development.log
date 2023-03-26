@@ -12679,3 +12679,60 @@ puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
 puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
 puma (5.6.5) lib/puma/server.rb:443:in `process_client'
 puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2023-03-26 15:07:05 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.0.2/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.0.2/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 493)
+Completed 200 OK in 6ms (Views: 2.9ms | Allocations: 4295)
+
+
+Started GET "/heroes" for ::1 at 2023-03-26 15:07:12 +0300
+  
+ActionController::RoutingError (uninitialized constant HeroesController
+Did you mean?  HerosController
+               HeropowersController):
+  
+Started GET "/heroes" for ::1 at 2023-03-26 15:07:21 +0300
+  
+ActionController::RoutingError (uninitialized constant HeroesController
+Did you mean?  HerosController
+               HeropowersController):
+  
+Started GET "/heroes" for ::1 at 2023-03-26 15:07:33 +0300
+  
+SyntaxError (/home/moses/Development/code/phase-4/code-challenges/Superhereos/backend/config/routes.rb:13: unterminated string meets end of file
+/home/moses/Development/code/phase-4/code-challenges/Superhereos/backend/config/routes.rb:13: syntax error, unexpected end-of-input, expecting `end'):
+  
+config/routes.rb:13: unterminated string meets end of file
+config/routes.rb:13: syntax error, unexpected end-of-input, expecting `end'
+config/routes.rb:13: unterminated string meets end of file
+config/routes.rb:13: syntax error, unexpected end-of-input, expecting `end'
+config/routes.rb:13: unterminated string meets end of file
+config/routes.rb:13: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/heroes" for ::1 at 2023-03-26 15:07:34 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/heroes"):
+  
+Started GET "/heroes" for ::1 at 2023-03-26 15:07:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/heroes"):
+  
+Started GET "/heroes" for ::1 at 2023-03-26 15:07:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/heroes"):
+  
+Started GET "/heroes" for ::1 at 2023-03-26 15:09:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HerosController#index as HTML
+  [1m[36mHero Load (0.1ms)[0m  [1m[34mSELECT "heros".* FROM "heros"[0m
+  ↳ app/controllers/heros_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 6.4ms | ActiveRecord: 0.5ms | Allocations: 24078)
+
+
+Started GET "/heroes" for ::1 at 2023-03-26 15:09:52 +0300
+Processing by HerosController#index as HTML
+  [1m[36mHero Load (0.2ms)[0m  [1m[34mSELECT "heros".* FROM "heros"[0m
+  ↳ app/controllers/heros_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1539)
+
+
