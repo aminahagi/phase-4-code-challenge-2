@@ -1,0 +1,4 @@
+W, [2023-03-26T15:12:05.059123 #49278]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2023-03-26T15:12:05.665131 #49278]  INFO -- : Migrating to CreateHeros (20230326074407)
+I, [2023-03-26T15:12:05.992387 #49278]  INFO -- : Migrating to CreatePowers (20230326074451)
+I, [2023-03-26T15:12:06.802123 #49278]  INFO -- : Migrating to CreateHeropowers (20230326075430)
