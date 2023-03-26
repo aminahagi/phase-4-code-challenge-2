@@ -1,0 +1,2 @@
+module HeropowersHelper
+end
