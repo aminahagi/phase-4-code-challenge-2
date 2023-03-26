@@ -1,4 +1,5 @@
 class PowersController < ApplicationController
+
   # GET /powers
   def index
     powers = Power.all
@@ -29,10 +30,12 @@ class PowersController < ApplicationController
   end
   
   
+
   private
-  
+
+  # Only allow a list of trusted parameters through.
   def power_params
-    params.require(:power).permit(:description)
+    params.require(:power).permit(:name, :description)
   end
-  
+
 end
