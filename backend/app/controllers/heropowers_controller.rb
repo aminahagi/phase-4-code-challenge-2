@@ -22,17 +22,24 @@ class HeropowersController < ApplicationController
   # POST /heropowers or /heropowers.json
   def create
     @heropower = Heropower.new(heropower_params)
-
+  
     respond_to do |format|
       if @heropower.save
-        format.html { redirect_to heropower_url(@heropower), notice: "Heropower was successfully created." }
-        format.json { render :show, status: :created, location: @heropower }
+        format.json {
+          render json: {
+            id: @heropower.hero.id,
+            name: @heropower.hero.name,
+            super_name: @heropower.hero.super_name,
+            powers: @heropower.hero.powers
+          }
+        }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @heropower.errors, status: :unprocessable_entity }
+        format.json { render json: { errors: @heropower.errors.full_messages }, status: :unprocessable_entity }
       end
     end
   end
+  
 
   # PATCH/PUT /heropowers/1 or /heropowers/1.json
   def update
