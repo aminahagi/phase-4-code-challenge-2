@@ -1251,3 +1251,154 @@ Processing by HerosController#show as HTML
 Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 601)
 
 
+Started GET "/" for ::1 at 2023-03-26 12:12:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-3.0.2/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-3.0.2/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 40.5ms | Allocations: 826)
+Completed 200 OK in 49ms (Views: 43.4ms | ActiveRecord: 0.0ms | Allocations: 6743)
+
+
+Started GET "/powers" for ::1 at 2023-03-26 12:12:45 +0300
+Processing by PowersController#index as HTML
+  [1m[36mPower Load (0.3ms)[0m  [1m[34mSELECT "powers".* FROM "powers"[0m
+  ↳ app/controllers/powers_controller.rb:6:in `index'
+Completed 200 OK in 28ms (Views: 22.9ms | ActiveRecord: 1.0ms | Allocations: 21467)
+
+
+Started GET "/powers" for ::1 at 2023-03-26 12:15:31 +0300
+Processing by PowersController#index as HTML
+  [1m[36mPower Load (0.1ms)[0m  [1m[34mSELECT "powers".* FROM "powers"[0m
+  ↳ app/controllers/powers_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.8ms | Allocations: 6567)
+
+
+Started GET "/powers/1" for ::1 at 2023-03-26 12:15:36 +0300
+Processing by PowersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPower Load (0.4ms)[0m  [1m[34mSELECT "powers".* FROM "powers" WHERE "powers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/powers_controller.rb:11:in `show'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 2964)
+
+
+Started GET "/powers/2" for ::1 at 2023-03-26 12:15:43 +0300
+Processing by PowersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPower Load (0.1ms)[0m  [1m[34mSELECT "powers".* FROM "powers" WHERE "powers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/powers_controller.rb:11:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 700)
+
+
+Started GET "/powers/5" for ::1 at 2023-03-26 12:15:46 +0300
+Processing by PowersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPower Load (0.1ms)[0m  [1m[34mSELECT "powers".* FROM "powers" WHERE "powers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/powers_controller.rb:11:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 692)
+
+
+Started GET "/powers/12" for ::1 at 2023-03-26 12:15:52 +0300
+Processing by PowersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPower Load (0.1ms)[0m  [1m[34mSELECT "powers".* FROM "powers" WHERE "powers"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/powers_controller.rb:11:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 937)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Power with 'id'=12):
+  
+app/controllers/powers_controller.rb:11:in `show'
+Started GET "/powers/12" for ::1 at 2023-03-26 12:16:19 +0300
+  
+SyntaxError (/home/moses/Development/code/phase-4/code-challenges/Superhereos/backend/app/controllers/powers_controller.rb:15: syntax error, unexpected local variable or method, expecting `end'
+...rror: "Power not found"} status: 404
+...                         ^~~~~~
+):
+  
+app/controllers/powers_controller.rb:15: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/powers_controller.rb:15: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/powers_controller.rb:15: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/powers/12" for ::1 at 2023-03-26 12:16:21 +0300
+  
+SyntaxError (/home/moses/Development/code/phase-4/code-challenges/Superhereos/backend/app/controllers/powers_controller.rb:15: syntax error, unexpected local variable or method, expecting `end'
+...rror: "Power not found"} status: 404
+...                         ^~~~~~
+):
+  
+app/controllers/powers_controller.rb:15: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/powers_controller.rb:15: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/powers_controller.rb:15: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/powers/12" for ::1 at 2023-03-26 12:18:58 +0300
+Processing by PowersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPower Load (0.1ms)[0m  [1m[34mSELECT "powers".* FROM "powers" WHERE "powers"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/powers_controller.rb:11:in `show'
+Completed 404 Not Found in 9ms (ActiveRecord: 1.1ms | Allocations: 5204)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Power with 'id'=12):
+  
+app/controllers/powers_controller.rb:11:in `show'
+Started GET "/powers/12" for ::1 at 2023-03-26 12:18:59 +0300
+Processing by PowersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPower Load (0.1ms)[0m  [1m[34mSELECT "powers".* FROM "powers" WHERE "powers"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/powers_controller.rb:11:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 894)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Power with 'id'=12):
+  
+app/controllers/powers_controller.rb:11:in `show'
+Started GET "/powers/12" for ::1 at 2023-03-26 12:24:48 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PowersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPower Load (0.1ms)[0m  [1m[34mSELECT "powers".* FROM "powers" WHERE "powers"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/powers_controller.rb:11:in `show'
+Completed 404 Not Found in 11ms (ActiveRecord: 0.7ms | Allocations: 10567)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Power with 'id'=12):
+  
+app/controllers/powers_controller.rb:11:in `show'
+Started GET "/powers/12" for ::1 at 2023-03-26 12:24:49 +0300
+Processing by PowersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPower Load (0.2ms)[0m  [1m[34mSELECT "powers".* FROM "powers" WHERE "powers"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/powers_controller.rb:11:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 988)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Power with 'id'=12):
+  
+app/controllers/powers_controller.rb:11:in `show'
+Started GET "/powers/12" for ::1 at 2023-03-26 12:29:38 +0300
+Processing by PowersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPower Load (0.1ms)[0m  [1m[34mSELECT "powers".* FROM "powers" WHERE "powers"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/powers_controller.rb:12:in `show'
+Completed 404 Not Found in 11ms (Views: 0.6ms | ActiveRecord: 1.1ms | Allocations: 5398)
+
+
+Started GET "/powers/12" for ::1 at 2023-03-26 12:29:39 +0300
+Processing by PowersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPower Load (0.1ms)[0m  [1m[34mSELECT "powers".* FROM "powers" WHERE "powers"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/powers_controller.rb:12:in `show'
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 930)
+
+
+Started GET "/powers/12" for ::1 at 2023-03-26 12:29:40 +0300
+Processing by PowersController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPower Load (0.1ms)[0m  [1m[34mSELECT "powers".* FROM "powers" WHERE "powers"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/powers_controller.rb:12:in `show'
+Completed 404 Not Found in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 910)
+
+
